@@ -29,6 +29,13 @@ export AWS_DEFAULT_REGION=X
 export PATH=$PATH:$PWD/sratoolkit.2.11.0-ubuntu64/bin 
 ```
 Run `vdb-config -i` 
+```
+Main > Enable Remote Access 
+Cache > Disable local File-caching
+AWS > report cloud instance identity 
+Save
+Exit
+```
 Todo:
 - write settings to execute
-
+Tmux Attach
