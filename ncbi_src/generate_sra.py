@@ -5,7 +5,7 @@ import pandas as pd
 import os
 import json
 
-df = pd.read_csv ('SraRunInfo.csv', low_memory = False)
+df = pd.read_csv ('SraRunInfo(1).csv', low_memory = False)
 column_names = ['scientific_name', 'model', 'occurences','bases']
 df_results= pd.DataFrame(columns = column_names)
 

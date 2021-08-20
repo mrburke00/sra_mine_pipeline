@@ -1,4 +1,4 @@
-sudo apt-get install samtools
+gsudo apt-get install samtools
 sudo apt-get install tabix
 aws s3 cp s3://layerlabcu/test_chicken_sra/SRR12827866.bam SRR1287866.bam
 samtools sort SRR1287866.bam -o SRR1287866.sorted.bam
