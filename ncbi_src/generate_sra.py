@@ -13,4 +13,4 @@ df_specific = df.loc[(df['ScientificName'] == 'Gallus gallus') & (df['bases'] >=
 
 df_specific = df_specific.sort_values(by =['bases'], ascending=False)
 print(df_specific.iloc[0:50])
-print(df_specific['Run'].tail(50).to_list())
+print(df_specific['Run'].head(50).to_list())

@@ -2,9 +2,9 @@ sudo apt-get install bwa
 
 cd /mnt/local/
 
-sudo mkdir var-calling
+#sudo mkdir var-calling
 cd var-calling/
-sudo mkdir -p raw_data reference_data scripts logs meta results/bwa
+#sudo mkdir -p raw_data reference_data scripts logs meta results/bwa
 
 
 cd reference_data/
