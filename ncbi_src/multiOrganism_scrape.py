@@ -1,14 +1,14 @@
 ###
 #Generates number of data samples of each organism and each sequencing 
 #instrument over a threshold base value 
-#Produces runinfo_results.csv
+#Produces multiOrganism_results.csv
 ###
 import pandas as pd
 from EcoNameTranslator import to_common
 import os
 import json
 
-df = pd.read_csv ('SraRunInfo(1).csv', low_memory = False)
+df = pd.read_csv ('SraRunInfo.csv', low_memory = False)
 column_names = ['scientific_name', 'model', 'occurences','bases']
 df_results= pd.DataFrame(columns = column_names)
 
@@ -19,7 +19,7 @@ with open('tax_corpus.json') as json_file:
 
 for index, row in df.iterrows():
 	new_row = {}
-	if row['bases'] >= 20000000000: #20gigabases
+	if row['bases'] >= 20000000000: #20gigabases threshold
 		if row['ScientificName'] not in df_results['scientific_name'].values: #name and platform doesnt exist
 			new_row['scientific_name'] = row['ScientificName']
 			new_row['model'] = row['Model']
@@ -52,7 +52,7 @@ for name in scientific_names:
 
 df_final['common_name'] = common_names
 df_final.rename(columns = {'bases' : 'sum bases'}, inplace=True)
-df_final.to_csv('runinfo_results.csv')
+df_final.to_csv('multiOrganism_results.csv')
 
 
 print('done')

@@ -26,7 +26,7 @@ export AWS_ACCESS_KEY_ID=X
 export AWS_SECRET_ACCESS_KEY=X
 export AWS_DEFAULT_REGION=X
 
-export PATH=$PATH:$PWD/sratoolkit.2.11.0-ubuntu64/bin 
+export PATH=$PATH:$PWD/sratoolkit.2.11.1-ubuntu64/bin 
 ```
 Run `vdb-config -i` 
 ```
